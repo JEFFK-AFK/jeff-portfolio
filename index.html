@@ -1,188 +1,123 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jeff Kariuki — Nairobi Web Designer Portfolio">
-  <title>Jeff Kariuki | Web Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeff Kariuki | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
-    }
-    body {
-      background: #f9f9f9;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
-    header {
-      background: #0b2545;
-      color: #fff;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    .hero-video {
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-    .hero-video iframe {
-      width: 90%;
-      max-width: 800px;
-      height: 400px;
-      border-radius: 12px;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .section-title {
-      font-size: 1.8rem;
-      color: #0b2545;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-    .about-container img {
-      width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .services ul, .projects ul {
-      padding-left: 1.2rem;
-    }
-    .project-card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 2rem;
-      background-color: white;
-      transition: transform 0.3s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-    .project-card img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .project-card a {
-      font-weight: 600;
-      color: #0b2545;
-      text-decoration: none;
-    }
-    .project-card p {
-      margin-top: 0.5rem;
-    }
-    .testimonial {
-      background: #fff;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    }
-    .testimonial p {
-      font-style: italic;
-    }
-    .contact a {
-      display: block;
-      margin-top: 0.5rem;
-      color: #0b2545;
-    }
-    footer {
-      background: #0b2545;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    @media (min-width: 600px) {
-      .about-container {
-        flex-direction: row;
-        align-items: flex-start;
-      }
-      .about-container div {
-        flex: 1;
-        padding-left: 1rem;
-      }
-    }
+    }body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projects img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    display: none;
+  }
+}
+
   </style>
-</head>
-<body>
-  <header>
+</head><body>
+  <nav>
     <h1>Jeff Kariuki</h1>
-    <p>Nairobi-Based Web Designer | Portfolio & Business Sites</p>
-  </header> <div class="hero-video">
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-  </div> <section>
-    <h2 class="section-title">About Me</h2>
-    <div class="about-container">
-      <img src="https://github.com/JEFFK-AFK/jeff-portfolio/blob/main/images/1000013105.jpg?raw=true" alt="Jeff Kariuki portrait">
-      <div>
-        <p>I’m Jeff Kariuki, a passionate and creative web designer based in Nairobi. I specialize in building responsive, user-friendly websites for businesses and individuals looking to grow their online presence. Whether it’s a simple portfolio or a full business site, I deliver clean, fast-loading websites that make an impact. Let’s turn your ideas into a professional online experience.</p>
-      </div>
-    </div>
-  </section> <section class="services">
-    <h2 class="section-title">Services</h2>
     <ul>
-      <li>Business Websites</li>
-      <li>Portfolio Websites</li>
-      <li>SEO Optimization</li>
-      <li>Responsive Design</li>
-      <li>Basic E-commerce Setup</li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section> <section class="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="project-card">
-      <img src="https://raw.githubusercontent.com/jeffk-afk/ROSE-SAMOSA-WEBSITE/main/assets/rose-preview.jpg" alt="Rose Samosas site preview">
-      <a href="https://jeffk-afk.github.io/ROSE-SAMOSA-WEBSITE" target="_blank">Rose Samosas (Live Business Site)</a>
-      <p>Built a clean, mobile-optimized website to showcase and sell Nairobi’s best handmade samosas.</p>
-    </div>
-    <div class="project-card">
-      <img src="https://raw.githubusercontent.com/jeffk-afk/WATCH-FUSION-KENYA/main/assets/fusion-preview.jpg" alt="Fusion Watches mockup preview">
-      <a href="https://jeffk-afk.github.io/WATCH-FUSION-KENYA/" target="_blank">Fusion Watches (Mockup Project)</a>
-      <p>Designed a stylish product showcase page for a fashion-forward watch business, featuring interactive previews.</p>
-    </div>
-  </section> <section class="testimonials">
-    <h2 class="section-title">What People Say</h2>
-    <div class="testimonial">
-      <p>“Jeff helped bring my food business online with a beautiful website — I’m already getting more orders!”</p>
-      <strong>— Rose N., Nairobi</strong>
-    </div>
-    <div class="testimonial">
-      <p>“The mockup Jeff built for my watch brand gave me the confidence to move forward with my e-commerce plans.”</p>
-      <strong>— Brian F., Watch Fusion</strong>
-    </div>
-  </section> <section class="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <p>Let’s talk about your project:</p>
-    <a href="https://wa.me/254113832180" target="_blank">WhatsApp: 0113 832 180</a>
-    <a href="mailto:barakakariuki322@gmail.com">Email: barakakariuki322@gmail.com</a>
+  </nav> <header>
+    <h2>Creative Web Designer</h2>
+    <p>I design modern, responsive websites that look great on any device. Let me build your online presence today.</p>
+  </header> <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I'm Jeff Kariuki, a Nairobi-based web designer who crafts engaging and functional websites. Whether you're a small business or an individual, I help you get online with a strong, stylish website.</p>
+  </section> <section id="projects" class="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <img src="https://raw.githubusercontent.com/jeffk-afk/ROSE-SAMOSA-WEBSITE/main/assets/rose-preview.jpg" alt="Rose Samosas">
+    <img src="https://raw.githubusercontent.com/jeffk-afk/WATCH-FUSION-KENYA/main/assets/fusion-preview.jpg" alt="Fusion Watches">
+  </section> <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>WhatsApp: <a href="https://wa.me/254113832180" style="color: white; text-decoration: underline;">0113 832 180</a></p>
+    <p>Email: <a href="mailto:barakakariuki322@gmail.com" style="color: white; text-decoration: underline;">barakakariuki322@gmail.com</a></p>
   </section> <footer>
-    <p>&copy; 2025 Jeff Kariuki. All rights reserved.</p>
-  </footer>
-</body>
-</html>
-Attachments area
-Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Music Video)
+    &copy; 2025 Jeff Kariuki. All rights reserved.
+  </footer> <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <script>
+    AOS.init();
+  </script></body></html>
