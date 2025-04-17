@@ -44,15 +44,43 @@
       border-bottom: 2px solid #ccc;
       padding-bottom: 0.5rem;
     }
-    .projects a {
-      color: #0b2545;
-      text-decoration: none;
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
-    .projects li {
-      margin-bottom: 1rem;
+    .about-container img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     .services ul, .projects ul {
       padding-left: 1.2rem;
+    }
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      background-color: white;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+    .project-card a {
+      font-weight: 600;
+      color: #0b2545;
+      text-decoration: none;
     }
     .contact a {
       display: block;
@@ -70,6 +98,14 @@
       header h1 {
         font-size: 2.5rem;
       }
+      .about-container {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .about-container div {
+        flex: 1;
+        padding-left: 1rem;
+      }
     }
   </style>
 </head>
@@ -79,7 +115,12 @@
     <p>Nairobi-Based Web Designer | Portfolio & Business Sites</p>
   </header> <section>
     <h2 class="section-title">About Me</h2>
-    <p>I’m Jeff Kariuki, a passionate and creative web designer based in Nairobi. I specialize in building responsive, user-friendly websites for businesses and individuals looking to grow their online presence. Whether it’s a simple portfolio or a full business site, I deliver clean, fast-loading websites that make an impact. Let’s turn your ideas into a professional online experience.</p>
+    <div class="about-container">
+      <img src="your-photo.jpg" alt="Jeff Kariuki portrait">
+      <div>
+        <p>I’m Jeff Kariuki, a passionate and creative web designer based in Nairobi. I specialize in building responsive, user-friendly websites for businesses and individuals looking to grow their online presence. Whether it’s a simple portfolio or a full business site, I deliver clean, fast-loading websites that make an impact. Let’s turn your ideas into a professional online experience.</p>
+      </div>
+    </div>
   </section> <section class="services">
     <h2 class="section-title">Services</h2>
     <ul>
@@ -91,10 +132,14 @@
     </ul>
   </section> <section class="projects">
     <h2 class="section-title">Projects</h2>
-    <ul>
-      <li><a href="https://rosesamosas.netlify.app" target="_blank">Rose Samosas (Live Business Site)</a></li>
-      <li><a href="#">Fusion Watches (Mockup Project)</a></li>
-    </ul>
+    <div class="project-card">
+      <img src="https://raw.githubusercontent.com/jeffk-afk/ROSE-SAMOSA-WEBSITE/main/assets/rose-preview.jpg" alt="Rose Samosas site preview">
+      <a href="https://jeffk-afk.github.io/ROSE-SAMOSA-WEBSITE" target="_blank">Rose Samosas (Live Business Site)</a>
+    </div>
+    <div class="project-card">
+      <img src="https://raw.githubusercontent.com/jeffk-afk/WATCH-FUSION-KENYA/main/assets/fusion-preview.jpg" alt="Fusion Watches mockup preview">
+      <a href="https://jeffk-afk.github.io/WATCH-FUSION-KENYA/" target="_blank">Fusion Watches (Mockup Project)</a>
+    </div>
   </section> <section class="contact">
     <h2 class="section-title">Contact Me</h2>
     <p>Let’s talk about your project:</p>
