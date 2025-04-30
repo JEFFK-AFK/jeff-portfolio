@@ -5,6 +5,41 @@
   <title>Jeff Kariuki | Web Designer</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    /* Default Desktop Layout */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* Mobile Layout (Hide menu and show hamburger icon) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show the hamburger menu on mobile */
+  }
+
+  .nav-list {
+    display: none; /* Hide the navigation items by default */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-list.active {
+    display: flex; /* Show navigation items when the menu is active */
+  }
     * {
       margin: 0;
       padding: 0;
@@ -90,6 +125,23 @@ footer {
   </style>
 </head>
 <body>
+  <header>
+  <h1>Jeff Kariuki</h1>
+  <nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
   <nav>
     <h1>Jeff Kariuki</h1>
     <ul>
@@ -107,5 +159,14 @@ footer {
     <p>&copy; 2025 Jeff Kariuki. All rights reserved.</p>
   </footer> <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <script>
     AOS.init();
-  </script></body>
+  </script>
+  <script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navList = document.querySelector('.nav-list');
+
+  mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('active'); // Toggle visibility of the menu on mobile
+  });
+</script>
+</body>
 </html>
