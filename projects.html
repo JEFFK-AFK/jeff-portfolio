@@ -1,50 +1,39 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Jeff Kariuki</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet"href="style.css">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; line-height: 1.6; }
-    nav { background: rgba(0,0,0,0.3); padding: 1rem; text-align: center; }
-    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .container { padding: 2rem; max-width: 1000px; margin: auto; }
-    h1 { font-size: 2rem; margin-bottom: 1.5rem; }
-    .project {
-      background: rgba(255,255,255,0.05);
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-    }
-    .project img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
-    .project a {
-      color: #00bcd4;
-      font-weight: 600;
-      text-decoration: none;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-   <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    
+<body class="bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-white font-[Inter]">
+  <!-- NAVBAR -->
+  <nav class="bg-black bg-opacity-30">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold">Jeff Kariuki</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="services.html" class="hover:underline">Services</a>
+        <a href="projects.html" class="hover:underline">Projects</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="index.html" class="block hover:underline">Home</a>
+      <a href="about.html" class="block hover:underline">About</a>
+      <a href="services.html" class="block hover:underline">Services</a>
+      <a href="projects.html" class="block hover:underline">Projects</a>
+      <a href="contact.html" class="block hover:underline">Contact</a>
+    </div>
   </nav>
   <div class="container">
     <h1 data-aos="fade-down">My Projects</h1><div class="project" data-aos="fade-up">
