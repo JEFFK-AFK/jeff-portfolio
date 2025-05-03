@@ -1,115 +1,60 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jeff Kariuki | Web Designer</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet"href="style.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }body {
-  background: linear-gradient(135deg, #000428, #004e92);
-  color: #fff;
-  min-height: 100vh;
-}
-
-nav {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-nav h1 {
-  font-size: 1.5rem;
-}
-
-nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  padding: 6rem 1rem 2rem;
-}
-
-.hero img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  max-width: 600px;
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 0.9rem;
-}
-
-@media (min-width: 768px) {
-  .hero h2 {
-    font-size: 3.5rem;
-  }
-}
-
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  
-  <nav>
-     <h1>Jeff Kariuki</h1>
-    <ul>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    </ul>
-   </nav> <section class="hero" data-aos="fade-up">
-    <img src="https://raw.githubusercontent.com/JEFFK-AFK/jeff-portfolio/main/images/1000013105.jpg" alt="Jeff Kariuki">
-    <h2>Hi, I'm Jeff Kariuki</h2>
-    <p>I design modern, responsive websites for Nairobi-based businesses, brands, and creatives. Let me bring your vision to life.</p>
-  </section> <footer>
+<body class="bg-gradient-to-br from-[#000428] to-[#004e92] text-white font-sans min-h-screen">
+
+  <!-- NAVBAR -->
+  <nav class="bg-black bg-opacity-60 fixed top-0 w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Jeff Kariuki</h1>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="services.html" class="hover:underline">Services</a>
+        <a href="projects.html" class="hover:underline">Projects</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="index.html" class="block hover:underline">Home</a>
+      <a href="about.html" class="block hover:underline">About</a>
+      <a href="services.html" class="block hover:underline">Services</a>
+      <a href="projects.html" class="block hover:underline">Projects</a>
+      <a href="contact.html" class="block hover:underline">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero flex flex-col justify-center items-center text-center px-4 pt-40 pb-10" data-aos="fade-up">
+    <img src="https://raw.githubusercontent.com/JEFFK-AFK/jeff-portfolio/main/images/1000013105.jpg" alt="Jeff Kariuki" class="w-36 h-36 rounded-full object-cover shadow-lg mb-4">
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Hi, I'm Jeff Kariuki</h2>
+    <p class="max-w-xl text-lg leading-relaxed">I design modern, responsive websites for Nairobi-based businesses, brands, and creatives. Let me bring your vision to life.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 bg-black bg-opacity-60 text-sm">
     <p>&copy; 2025 Jeff Kariuki. All rights reserved.</p>
-  </footer> <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <script>
-    AOS.init();
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
   </script>
-  
-  </body>
+</body>
 </html>
