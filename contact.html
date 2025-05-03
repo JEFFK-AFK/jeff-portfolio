@@ -56,7 +56,12 @@
     &copy; 2025 Jeff Kariuki. All rights reserved.
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+     AOS.init({
+       once: true,
+       duration: 600,
+       delay: 100,
+       offset:0
+     });
     </script>
       <script>
     document.getElementById('menu-btn').addEventListener('click', () => {
