@@ -11,32 +11,34 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; line-height: 1.6; }
   
-      header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
+    
+    nav {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
+nav h1 {
+  font-size: 1.5rem;
+}
 
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 600px;
-      margin: auto;
-    }
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
 
     h2 {
       text-align: center;
