@@ -1,34 +1,45 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Jeff Kariuki</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet"href="style.css">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; line-height: 1.6; }
-    nav { background: rgba(0,0,0,0.3); padding: 1rem; text-align: center; }
-    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .container { padding: 2rem; max-width: 900px; margin: auto; }
-    h1 { font-size: 2rem; margin-bottom: 1rem; }
-    ul { list-style: square; padding-left: 1.5rem; }
-    li { margin-bottom: 0.75rem; }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-  <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+<body class="bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-white font-[Inter]">
+  <!-- NAVBAR -->
+  <nav class="bg-black bg-opacity-30">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold">Jeff Kariuki</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="services.html" class="hover:underline">Services</a>
+        <a href="projects.html" class="hover:underline">Projects</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="index.html" class="block hover:underline">Home</a>
+      <a href="about.html" class="block hover:underline">About</a>
+      <a href="services.html" class="block hover:underline">Services</a>
+      <a href="projects.html" class="block hover:underline">Projects</a>
+      <a href="contact.html" class="block hover:underline">Contact</a>
+    </div>
   </nav>
-  <div class="container" data-aos="fade-up">
-    <h1>Services I Offer</h1>
-    <ul>
+
+  <!-- SERVICES SECTION -->
+  <div class="container max-w-3xl mx-auto p-6" data-aos="fade-up">
+    <h1 class="text-2xl font-bold mb-4">Services I Offer</h1>
+    <ul class="list-disc pl-6 space-y-3">
       <li>Business Website Design (for restaurants, shops, startups, etc.)</li>
       <li>Portfolio Website Design (for creatives and professionals)</li>
       <li>SEO Optimization (to boost visibility on Google)</li>
@@ -36,10 +47,14 @@
       <li>Basic E-commerce Setup (sell your products online easily)</li>
     </ul>
   </div>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-    
-	
-
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
-</html>
+	</html>
